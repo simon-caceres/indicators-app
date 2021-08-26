@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "indicators",
+    "slug": "indicators",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "indicators"
+}
