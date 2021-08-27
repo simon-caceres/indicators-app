@@ -38,7 +38,7 @@ export const Home = () => {
     const renderItem = ({ item }) => <ItemComponent {...item} />;
 
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView  style={styles.container}>
             {
                 loading
                     ? (
