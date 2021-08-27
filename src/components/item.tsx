@@ -15,6 +15,8 @@ declare interface IndicatorType {
     valor: number;
 }
 
+const FlexItem = Flex.Item;
+
 export const ItemComponent = (props: IndicatorType) => {
     const { codigo, nombre, unidad_medida, fecha, valor } = props;
     const navigation = useNavigation();
@@ -31,30 +33,30 @@ export const ItemComponent = (props: IndicatorType) => {
                     <Card.Body>
                         <View style={{ height: 30, marginTop: 10, marginBottom: 10 }}>
                             <Flex justify="center">
-                                <Flex.Item style={{ paddingLeft: 4, paddingRight: 4 }}>
+                                <FlexItem style={{ paddingLeft: 4, paddingRight: 4 }}>
                                     <Text style={{ marginLeft: 16 }}>Valor: {valor} </Text>
-                                </Flex.Item>
-                                <Flex.Item style={{ paddingLeft: 4, paddingRight: 4 }} />
-                                <Flex.Item >
+                                </FlexItem>
+                                <FlexItem style={{ paddingLeft: 4, paddingRight: 4 }} />
+                                <FlexItem >
                                     <Flex align="end" justify="end">
-                                        <Flex.Item style={{ alignSelf: 'flex-start' }} >
+                                        <FlexItem style={{ alignSelf: 'flex-start' }} >
                                             <Button
-                                                onPress={() => navigation.navigate('Cards', {type: unidad_medida})}
+                                                onPress={() => navigation.navigate('Cards', {...props})}
                                                 startIcon={<InfoOutlineIcon color="blue.300" size={5} />}
                                                 size="xs"
                                                 variant="link"
                                             />
-                                        </Flex.Item>
-                                        <Flex.Item >
+                                        </FlexItem>
+                                        <FlexItem >
                                             <Button
-                                                onPress={() => navigation.navigate('Detail', {type: unidad_medida})}
+                                                onPress={() => navigation.navigate('Detail', {type: codigo, title: nombre})}
                                                 startIcon={<RightIcon />}
                                                 size="xs"
                                                 variant="link"
                                             />
-                                        </Flex.Item>
+                                        </FlexItem>
                                     </Flex>
-                                </Flex.Item>
+                                </FlexItem>
                             </Flex>
                         </View>
                     </Card.Body>
