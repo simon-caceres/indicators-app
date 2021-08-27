@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import IndicatorsServices from '../services/microservices/indicators';
 
-export const Details = () => {
+export const Details = ({route}) => {
+    const {type} = route.params;
+
+    const getInfo = async () => {
+        try {
+            const res = await IndicatorsServices.getByType(type);
+            console.log(res)
+        } catch (error) {
+            
+        }
+    }
+
+    useEffect(() => {
+        getInfo();
+    }, [])
+
     return (
         <View style={styles.container}>
             <Text> app!</Text>

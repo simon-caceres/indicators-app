@@ -10,6 +10,7 @@ export const Home = () => {
         try {
             const res = await IndicatorsServices.getAll()
             if (res.status === 200 || res.status === 201) {
+                console.log(res)
                 delete res.data.autor
                 delete res.data.version
                 delete res.data.fecha
