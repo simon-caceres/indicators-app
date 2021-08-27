@@ -10,9 +10,6 @@ Fetch from the main branch:
 
 ```
 git fetch origin main
-
-```
-
 ```
 
 Navigate to the root folder:
