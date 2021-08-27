@@ -1,11 +1,7 @@
 {
-  "expo": {
-    "name": "indicators",
-    "slug": "indicators",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  },
-  "name": "indicators"
+  "displayName": "indicators",
+  "name": "indicators",
+  "android": {
+    "package": "com.simon_cs.indicators"
+  }
 }

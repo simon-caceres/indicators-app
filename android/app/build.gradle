@@ -132,7 +132,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.indicators"
+        applicationId "com.simon_cs.indicators"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
